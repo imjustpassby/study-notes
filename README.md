@@ -1,2 +1,3 @@
 # study-notes
-daily study notes
+日常学习笔记
+
