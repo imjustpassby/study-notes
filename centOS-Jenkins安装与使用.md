@@ -6,6 +6,10 @@
 sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
 sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
 sudo yum install jenkins --nogpgcheck
+yum install docker.x86_64 //安装docker
+yum -y install java-1.8.0-openjdk* // 安装java环境
+yum -y install node //安装node环境
+yum -y install git //安装git
 ```
 
 ## 使用
