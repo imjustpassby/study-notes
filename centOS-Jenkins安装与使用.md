@@ -70,19 +70,25 @@ yum -y install git //安装git
 
 5. jenkins-新建任务
 
+   + 配置
+
    ![new task1](https://i.loli.net/2020/07/22/L8k9BdlPDbjHWEf.png)
 
    ![new task2](http://ww1.sinaimg.cn/large/826d6e88gy1ggzj9g965oj21ig0ra75u.jpg)
 
    ![git url](https://i.loli.net/2020/07/22/Sto914RzZn3yAeW.png)
 
-   添加github账户为credentials
+   + 添加github账户为credentials
 
    ![add github account](https://i.loli.net/2020/07/22/IbUzQow3riABXv7.png)
 
    ![environment](https://i.loli.net/2020/07/22/6cvWkwuf2r1RIjD.png)
 
    ![shell](https://i.loli.net/2020/07/22/zJTSFqe7EY5VOIU.png)
+
+   + github 项目添加 webhook
+
+   ![webhook](http://ww1.sinaimg.cn/large/826d6e88gy1ghg0bpax5oj21ig0rawgg.jpg)
 
 6. 更新远程仓库会后自动构建
 
