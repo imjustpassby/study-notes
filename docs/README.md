@@ -1,5 +1,6 @@
 ---
 home: true
-actionText: 开始
+actionText: Begin
+heroImage: /logo.png
 actionLink: /frontend/
 ---
