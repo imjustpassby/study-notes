@@ -47,7 +47,7 @@ yum -y install git //安装git
 
 2. jenkins-系统管理-全局工具配置
 
-   ![global git](C:\Users\26080\Pictures\winsnap截图\sshot-20200721-235923.png)
+   ![global git](http://ww1.sinaimg.cn/large/826d6e88gy1ghg1rq46zmj21ig0ramyy.jpg)
 
    ![global node](http://ww1.sinaimg.cn/large/826d6e88gy1ggzhmmvz9hj21ig0ra0ue.jpg)
    

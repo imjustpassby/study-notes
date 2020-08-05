@@ -11,7 +11,7 @@
 + typora偏好设置
 
   + 上传服务选择 *Custom Command*
-    + 自定义命令 `"[your node path] [your picgo-core path] upload"`，可以使用`which no de``which picgo`找到具体路径
+    + 自定义命令 `"[your node path] [your picgo-core path] upload"`，可以使用`which node``which picgo`找到具体路径
 
   ![typora config](https://i.loli.net/2020/07/26/x1t9BX5AoK3LeQS.png)
 
@@ -19,9 +19,7 @@
 
   + 在smms官网创建账号并获取api token
   
-  + ```
-  picgo set uploader
-    ```
+  + `picgo set uploader`
     
   + ![picgo config](https://i.loli.net/2020/07/26/9EWJzBtTGP5j4a3.png)
   

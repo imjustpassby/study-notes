@@ -1,3 +1,3 @@
-# study-notes
-日常学习笔记
+# study notes
 
+日常学习笔记

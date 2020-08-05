@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>服务器与域名购买 | study notes</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    
+    <meta name="description" content="学习笔记">
+    <link rel="preload" href="/assets/css/0.styles.34d67128.css" as="style"><link rel="preload" href="/assets/js/app.a7c1914d.js" as="script"><link rel="preload" href="/assets/js/2.b2562761.js" as="script"><link rel="preload" href="/assets/js/8.216d9194.js" as="script"><link rel="prefetch" href="/assets/js/3.d0a9eaf2.js"><link rel="prefetch" href="/assets/js/4.7d5f245c.js"><link rel="prefetch" href="/assets/js/5.f8be39f3.js"><link rel="prefetch" href="/assets/js/6.b05058e0.js"><link rel="prefetch" href="/assets/js/7.7e31a088.js"><link rel="prefetch" href="/assets/js/9.2c0d50eb.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.34d67128.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">study notes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>前端</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/frontend/" class="sidebar-link">Introduction</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>服务器</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/server/阿里云服务器购买使用.html" class="active sidebar-link">服务器与域名购买</a></li><li><a href="/server/centOS-Jenkins安装与使用.html" class="sidebar-link">centos-jenkins教程</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>软件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/software/Typora图片自动上传.html" class="sidebar-link">Typora+picgo+smms图片自动上传图床</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="服务器与域名购买"><a href="#服务器与域名购买" class="header-anchor">#</a> 服务器与域名购买</h1> <ol><li><p>阿里云官网购买</p></li> <li><p>服务器域名选购</p></li></ol> <h1 id="服务器相关设置"><a href="#服务器相关设置" class="header-anchor">#</a> 服务器相关设置</h1> <ol><li><p>修改密码</p></li> <li><p>域名解析</p></li> <li><p>开放端口</p></li> <li><p>域名备案</p></li> <li><p>申请免费ssl证书</p></li></ol> <h1 id="服务器配置"><a href="#服务器配置" class="header-anchor">#</a> 服务器配置</h1> <ol><li>安装git</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code>yum <span class="token function">install</span> -y <span class="token function">git</span>
+</code></pre></div><ol start="2"><li>安装nginx</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code>yum <span class="token function">install</span> -y nginx
+</code></pre></div><ol start="3"><li>安装node</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token builtin class-name">cd</span> /yourpath
+<span class="token function">wget</span> https://nodejs.org/dist/v12.16.1/node-v12.16.1-linux-x64.tar.xz
+
+xz -d node-v12.16.1-linux-x64.tar.xz
+	
+<span class="token function">tar</span> -zxvf node-v12.16.1-linux-x64.tar
+	
+<span class="token function">npm</span> <span class="token function">install</span> -g <span class="token function">yarn</span>
+	
+<span class="token function">vim</span> ~/.bash_profile
+	
+<span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token environment constant">$HOME</span>/bin:/your-node-path/bin
+	
+<span class="token builtin class-name">source</span> ~/.bash_profile
+</code></pre></div><ol start="4"><li>nginx配置</li></ol> <div class="language-nginx extra-class"><pre class="language-nginx"><code><span class="token keyword">server</span> <span class="token punctuation">{</span>    
+	<span class="token keyword">listen</span> <span class="token number">80</span><span class="token punctuation">;</span>    
+	<span class="token keyword">server_name</span> yoursite<span class="token punctuation">;</span>    
+	<span class="token keyword">rewrite</span> <span class="token operator">^</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token keyword">https</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span><span class="token variable">$server_name</span>$<span class="token number">1</span> permanent<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">server</span> <span class="token punctuation">{</span>  
+	<span class="token keyword">listen</span> <span class="token number">443</span> <span class="token keyword">ssl</span> http2<span class="token punctuation">;</span>  
+	<span class="token keyword">server_name</span> yoursite<span class="token punctuation">;</span>  
+	<span class="token keyword">access_log</span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>nginx<span class="token operator">/</span>access<span class="token punctuation">.</span>log<span class="token punctuation">;</span>  
+	<span class="token keyword">error_log</span> <span class="token operator">/</span>var<span class="token operator">/</span>log<span class="token operator">/</span>nginx<span class="token operator">/</span>error<span class="token punctuation">.</span>log<span class="token punctuation">;</span>  
+	<span class="token keyword">ssl</span> on<span class="token punctuation">;</span>  
+	<span class="token keyword">ssl_certificate</span> your<span class="token punctuation">.</span>pem<span class="token punctuation">;</span>  
+	<span class="token keyword">ssl_certificate_key</span> your<span class="token punctuation">.</span>key<span class="token punctuation">;</span>  
+	<span class="token keyword">ssl_protocols</span> TLSv1 TLSv1<span class="token punctuation">.</span><span class="token number">1</span> TLSv1<span class="token punctuation">.</span><span class="token number">2</span><span class="token punctuation">;</span>  
+	<span class="token keyword">ssl_ciphers</span> ECDHE<span class="token operator">-</span>RSA<span class="token operator">-</span>AES256<span class="token operator">-</span>SHA384<span class="token punctuation">:</span>AES256<span class="token operator">-</span>SHA256<span class="token punctuation">:</span>RC4<span class="token punctuation">:</span>HIGH<span class="token punctuation">:</span><span class="token operator">!</span>MD5<span class="token punctuation">:</span><span class="token operator">!</span>aNULL<span class="token punctuation">:</span><span class="token operator">!</span>eNULL<span class="token punctuation">:</span><span class="token operator">!</span>NULL<span class="token punctuation">:</span><span class="token operator">!</span>DH<span class="token punctuation">:</span><span class="token operator">!</span>EDH<span class="token punctuation">:</span><span class="token operator">!</span>AESGCM<span class="token punctuation">;</span>  
+	<span class="token keyword">ssl_prefer_server_ciphers</span> on<span class="token punctuation">;</span>  
+	<span class="token keyword">ssl_session_cache</span> shared<span class="token punctuation">:</span><span class="token keyword">SSL</span><span class="token punctuation">:</span><span class="token number">10</span>m<span class="token punctuation">;</span>  
+	<span class="token keyword">ssl_session_timeout</span> <span class="token number">10</span>m<span class="token punctuation">;</span>  
+	<span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span>    
+		<span class="token keyword">root</span> <span class="token operator">/</span>yourpath<span class="token punctuation">;</span>  
+	<span class="token punctuation">}</span>
+
+  <span class="token keyword">location</span> <span class="token operator">~</span> <span class="token operator">/</span>api<span class="token operator">/</span><span class="token punctuation">{</span>    
+  	<span class="token keyword">rewrite</span> <span class="token operator">^</span><span class="token operator">/</span>api<span class="token operator">/</span><span class="token punctuation">(</span><span class="token punctuation">.</span><span class="token operator">*</span><span class="token punctuation">)</span>$ <span class="token operator">/</span>$<span class="token number">1</span> <span class="token keyword">break</span><span class="token punctuation">;</span>    
+  	<span class="token keyword">proxy_pass</span> <span class="token keyword">https</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span><span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">:</span><span class="token number">3001</span><span class="token punctuation">;</span>    
+  	<span class="token keyword">proxy_set_header</span> Host        <span class="token variable">$host</span><span class="token punctuation">;</span>    
+  	<span class="token keyword">proxy_set_header</span> X<span class="token operator">-</span>Real<span class="token operator">-</span>IP     <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>    
+  	<span class="token keyword">proxy_set_header</span> X<span class="token operator">-</span>Forwarded<span class="token operator">-</span>For  <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>    
+  	<span class="token keyword">proxy_set_header</span> X<span class="token operator">-</span>Forwarded<span class="token operator">-</span>Proto <span class="token variable">$scheme</span><span class="token punctuation">;</span>  
+  	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="5"><li>node + express 开启 https</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//app.js</span>
+
+<span class="token keyword">const</span> https <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'https'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> caConf <span class="token operator">=</span> <span class="token punctuation">{</span> key<span class="token operator">:</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">'your.key'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> cert<span class="token operator">:</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">'your.pem'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> server <span class="token operator">=</span> https<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span>caConf<span class="token punctuation">,</span> app<span class="token punctuation">)</span><span class="token punctuation">;</span>
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3001</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;server starting on port : &quot;</span> <span class="token operator">+</span> <span class="token number">3001</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/frontend/" class="prev">
+        Introduction
+      </a></span> <span class="next"><a href="/server/centOS-Jenkins安装与使用.html">
+        centos-jenkins教程
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a7c1914d.js" defer></script><script src="/assets/js/2.b2562761.js" defer></script><script src="/assets/js/8.216d9194.js" defer></script>
+  </body>
+</html>
