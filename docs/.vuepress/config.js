@@ -1,8 +1,8 @@
 module.exports = {
   base: '/notes/',
   dest: 'dist',
-  title: 'study notes',
-  description: 'daily study notes',
+  title: '搬砖日记🤺🤺🤺',
+  description: '高效搬砖手册📖',
   themeConfig: {
     editLinks: false,
     docsDir: 'docs',
