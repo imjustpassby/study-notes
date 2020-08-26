@@ -32,6 +32,11 @@ module.exports = {
         title: '软件',
         collapsable: false,
         children: ['software/Typora图片自动上传']
+      },
+      {
+        title: '外链资源',
+        collapsable: false,
+        children: ['outside/docker/docker']
       }
     ]
   }
