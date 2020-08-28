@@ -7,6 +7,7 @@ module.exports = {
     editLinks: false,
     docsDir: 'docs',
     nav: [],
+    smoothScroll: true,
     sidebar: [
       {
         title: '前端',
@@ -36,7 +37,12 @@ module.exports = {
       {
         title: '外链资源',
         collapsable: false,
-        children: ['outside/docker/docker']
+        children: [
+          'outside/docker/docker',
+          'outside/typescript/TypeScript',
+          'outside/github/github',
+          'outside/node/node'
+        ]
       }
     ]
   }
