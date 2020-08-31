@@ -38,10 +38,11 @@ module.exports = {
         title: '外链资源',
         collapsable: false,
         children: [
+		  'outside/dalao/技术大佬',
           'outside/docker/docker',
           'outside/typescript/TypeScript',
-          'outside/github/github',
-          'outside/node/node'
+          'outside/node/node',
+		  'outside/tools/tools'
         ]
       }
     ]
