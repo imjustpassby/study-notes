@@ -9,11 +9,15 @@ module.exports = {
     nav: [],
     smoothScroll: true,
     sidebar: [
+	  {
+		title: 'front',
+		collapsable: false,
+		children: [['frontend/', 'Introduction'],]
+	  }，
       {
         title: 'Vue',
         collapsable: false,
         children: [
-          ['vue/', 'Introduction'],
           'vue/vue+ts引入antd',
           'vue/vue+ts+antd项目建立',
           'vue/vue-ts中封装axios',
