@@ -9,11 +9,11 @@ module.exports = {
     nav: [],
     smoothScroll: true,
     sidebar: [
-	  {
-		title: 'front',
-		collapsable: false,
-		children: [['frontend/', 'Introduction'],]
-	  }，
+      {
+        title: 'front',
+        collapsable: false,
+        children: [['frontend/', 'Introduction']]
+      },
       {
         title: 'Vue',
         collapsable: false,
@@ -24,13 +24,11 @@ module.exports = {
           'vue/vue-ts项目中vuex如何使用'
         ]
       },
-	  {
-	    title: 'React',
-		collapsable: false,
-		children: [
-		  'react/react外链资源'
-		]
-	  },
+      {
+        title: 'React',
+        collapsable: false,
+        children: ['react/react外链资源']
+      },
       {
         title: '服务器',
         collapsable: false,
@@ -49,13 +47,13 @@ module.exports = {
         title: '外链资源',
         collapsable: false,
         children: [
-		  'outside/dalao/技术大佬',
+          'outside/dalao/技术大佬',
           'outside/docker/docker',
           'outside/typescript/TypeScript',
           'outside/node/node',
-		  'outside/tools/tools'
+          'outside/tools/tools'
         ]
       }
     ]
   }
-};
+}
