@@ -10,16 +10,23 @@ module.exports = {
     smoothScroll: true,
     sidebar: [
       {
-        title: '前端',
+        title: 'Vue',
         collapsable: false,
         children: [
-          ['frontend/', 'Introduction'],
-          'frontend/vue+ts引入antd',
-          'frontend/vue+ts+antd项目建立',
-          'frontend/vue-ts中封装axios',
-          'frontend/vue-ts项目中vuex如何使用'
+          ['vue/', 'Introduction'],
+          'vue/vue+ts引入antd',
+          'vue/vue+ts+antd项目建立',
+          'vue/vue-ts中封装axios',
+          'vue/vue-ts项目中vuex如何使用'
         ]
       },
+	  {
+	    title: 'React',
+		collapsable: false,
+		children: [
+		  'react/react外链资源'
+		]
+	  },
       {
         title: '服务器',
         collapsable: false,
