@@ -29,6 +29,13 @@ module.exports = {
         collapsable: false,
         children: ['react/react外链资源']
       },
+	  {
+		title: 'javaScript',
+		collapsable: false,
+		children: [
+		  'javaScript/eventEmitter'
+		]
+	  },
       {
         title: '服务器',
         collapsable: false,
