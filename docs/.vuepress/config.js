@@ -58,7 +58,8 @@ module.exports = {
           'outside/docker/docker',
           'outside/typescript/TypeScript',
           'outside/node/node',
-          'outside/tools/tools'
+          'outside/tools/tools',
+		  'outside/codeSpecification/大厂代码规范'
         ]
       }
     ]
