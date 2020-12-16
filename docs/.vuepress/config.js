@@ -21,7 +21,8 @@ module.exports = {
           'vue/vue+ts引入antd',
           'vue/vue+ts+antd项目建立',
           'vue/vue-ts中封装axios',
-          'vue/vue-ts项目中vuex如何使用'
+          'vue/vue-ts项目中vuex如何使用',
+		  'vue/体验vue3'
         ]
       },
       {
@@ -42,7 +43,9 @@ module.exports = {
         children: [
           'server/阿里云服务器购买使用',
           'server/centOS-Jenkins安装与使用',
-          'server/使用SSH-Key登录远程服务器'
+          'server/使用SSH-Key登录远程服务器',
+		  'server/nginx',
+		  'server/vue项目打包部署到nginx'
         ]
       },
       {
