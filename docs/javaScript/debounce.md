@@ -1,3 +1,4 @@
+```javascript
 export function debounceFunc(func, wait, immediate) {
   var timeout, args, context, timestamp, result
   if (null == wait) wait = 100
@@ -85,3 +86,6 @@ export function debounce(func, wait, immediate) {
     return result
   }
 }
+
+```
+
