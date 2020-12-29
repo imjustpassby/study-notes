@@ -1,4 +1,4 @@
-# element-ui 异步表单
+# element-ui使用总结
 
 ## Form
 
@@ -73,6 +73,51 @@ new Vue({
     }
   }
 })
+</script>
+```
+
+## select选择器
+
+1. 遇到的问题：select组件在进行远程搜索，并可以多选的时候，需要重置搜索条件，直接简单的把v-model的数组清空，页面上还是会保留已选择的选项。
+
+2. 解决办法：给select组件添加ref属性，调用组件的handleClearClick方法，相当于模拟点击右侧clear按钮
+
+   ![select组件](https://i.loli.net/2020/12/29/w2kPSTQmYBJzsFD.png)
+
+```vue
+<template>
+	<el-select
+	  v-model="searchModel.selectTags"
+	  multiple
+	  collapse-tags
+	  filterable
+	  clearable
+	  remote
+	  ref="selectTags"
+	  :remote-method="searchTags"
+	  :loading="searchTagLoading"
+	  placeholder="远程搜索标签"
+	>
+      <el-option
+		 v-for="item in tagsList"
+		 :key="item.value"
+         :label="item.label"
+         :value="item.value"
+      ></el-option>
+    </el-select>
+	<el-button @click="reset($event)">
+		重置
+	</el-button>
+</template>
+<script>
+    new Vue({
+        methods: {
+            resetForm(e) {
+                // 必须获取和传递event事件
+                this.$refs['selectTags'].handleClearClick(event)
+            }
+        }
+    })
 </script>
 ```
 
