@@ -23,7 +23,8 @@ module.exports = {
           'vue/vue-ts中封装axios',
           'vue/vue-ts项目中vuex如何使用',
           'vue/体验vue3',
-          'vue/element-ui使用总结'
+          'vue/element-ui使用总结',
+          'vue/axios取消请求'
         ]
       },
       {
